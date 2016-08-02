@@ -55,7 +55,7 @@ numbers
 udacious <- c("Chris Saden", "Lauren Castellano",
               "Sarah Spikes","Dean Eckles",
               "Andy Brown", "Moira Burke",
-              "Kunal Chawla", YOUR_NAME)
+              "Kunal Chawla", "Scott Brenstuhl")
 
 # Notice how R updates 'udacious' in the workspace.
 # It should now say something like 'chr[1:8]'.
@@ -69,7 +69,7 @@ mystery
 # You just created a new vector called mystery. What do you
 # think is in this vector? (scroll down for the answer)
 
-
+# The number of characters in each string. 
 
 
 
@@ -174,8 +174,10 @@ mtcars
 # and see if you can figure out what they do.
 
 str(mtcars)
+# Information about the object structure
 
 dim(mtcars)
+# dimensions of the data frame
 
 # Scroll down for the answer.
 
@@ -246,7 +248,8 @@ mtcars$mpg
 
 # Print out any two other variables to the console.
 
-
+mtcars$cyl
+mtcars$disp
 
 # This is a vector containing the mpg (miles per gallon) of
 # the 32 cars. Run this next line of code to get the average mpg for

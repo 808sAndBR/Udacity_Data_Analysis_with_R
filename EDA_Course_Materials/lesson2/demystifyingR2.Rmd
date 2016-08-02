@@ -24,12 +24,16 @@ Subset the data so that you create a new data frame that contains
 cars that get 23 or more mpg (miles per gallon). Save it to a new data
 frame called efficient.
 ```{r}
+library(dplyr)
+
+efficient <- filter(mtcars, mpg >= 23)
 
 ```
 
 3. How many cars get more than 23 mpg? Use one of the commands you
 learned in the demystifying.R to answer this question.
 ```{r}
+nrow(efficient)
 
 ```
 
@@ -66,11 +70,16 @@ Now you try some.
 6. Print the cars that have a 1/4 mile time (qsec) less than or equal to
 16.90 seconds to the console.
 ```{r}
+filter(mtcars, qsec <= 16.9)
 
 ```
 
 7. Save the subset of cars that weigh under 2000 pounds (weight is measured in lb/1000) to a variable called lightCars. Print the numbers of cars and the subset to the console.
 ```{r}
+lightCars <- filter(mtcars, wt < 2)
+
+nrow(lightCars)
+lightCars
 
 ```
 
@@ -103,7 +112,7 @@ Open the table of values to see what values year takes on.
 
 Drop the year variable from the data set.
 ```{r}
-
+mtcars$year <- NULL
 ```
 
 
@@ -160,6 +169,13 @@ answer a question to continue on in Lesson 2.
 
 Which car(s) have an mpg (miles per gallon) greater than or equal to 30
 OR hp (horsepower) less than 60? Create an R chunk of code to answer the question.
+
+```{r}
+# Hadley hates row.names :/
+# filter(mtcars, mpg >= 30 | hp < 60)
+subset(mtcars, mpg >= 30 | hp < 60)
+
+```
 
 
 
